@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+  --desuratedRed: hsl(0, 36%, 70%);
+  --softRed: hsl(0, 93%, 68%);
+  --grayishRed: hsl(0, 6%, 24%);
+  --lightGradient: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --redGradient: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+}
+
+.hero {
+  background-image: url(./images/hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 250px;
+}
+
+.desc {
+  color: var(--desuratedRed);
+}
+
+h1 {
+  letter-spacing: 12px;
+}
+
+h1::first-line {
+  font-weight: 300;
+}
+
+h1 strong {
+  color: var(--grayishRed);
+}
+
+.desc p {
+  font-size: 15px;
+}
+
+#emailCont {
+  position: relative;
+  height: 70px;
+}
+
+#email {
+  border: 1px solid var(--desuratedRed);
+  border-radius: 23px;
+  height: 45px;
+  color: var(--desuratedRed);
+  opacity: 0.7;
+  font-size: 15px;
+  width: 90%;
+}
+
+#email:active,
+#email:focus {
+  color: var(--grayishRed);
+  opacity: 1;
+  outline: none;
+}
+
+.icon {
+  top: -45px;
+  left: 37%;
+  width: 16px;
+  display: none;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  height: 45px;
+  width: 60px;
+  padding: 10px;
+  background-image: var(--redGradient);
+  border-radius: 23px;
+  top: -45px;
+  left: 37%;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.emailErr {
+  border: 2px solid var(--softRed) !important;
+}
+
+.error {
+  color: var(--softRed);
+  text-align: left;
+  margin: -35px 0px 10px 18px;
+  font-size: 12px;
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+}
+
+.attribution a {
+  color: var(--desuratedRed);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  .hero {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 515px;
+  }
+
+  .desc {
+    width: 80%;
+  }
+
+  .button {
+    left: 39%;
+  }
+
+  .icon {
+    width: 25px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    height: 685px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header {
+    width: 55%;
+    padding: 50px 0px 50px 150px;
+    display: inline-block;
+  }
+
+  .header img {
+    width: 30% !important;
+  }
+
+  .hero {
+    background-image: url(./images/hero-desktop.jpg);
+    width: 45% !important;
+    float: right;
+    height: 100vh;
+    background-size: cover;
+  }
+
+  .desc {
+    width: 55%;
+    padding: 50px 0px 50px 150px !important;
+  }
+
+  .desc h1 {
+    font-size: 4.5em;
+  }
+
+  .desc p {
+    font-size: 20px;
+    width: 75%;
+  }
+
+  #email {
+    width: 73%;
+  }
+
+  .button {
+    top: 0px;
+    left: -20%;
+    text-align: center;
+  }
+
+  .icon {
+    top: 0px;
+    left: -21%;
+  }
+
+  .error {
+    margin-top: 5px;
+  }
+
+  footer {
+    width: 55%;
+    margin: -45px 0px 0px 0px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-height: 600px) and (max-height: 750px) {
+  .hero {
+    background-image: url(./images/hero-desktop.jpg);
+    width: 45% !important;
+    float: right;
+    height: 800px;
+    background-size: contain;
+  }
+
+  .desc {
+    width: 55%;
+    padding: 50px 0px 50px 150px !important;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .button {
+    left: -17%;
+  }
+
+  .icon {
+    left: -19%;
+  }
+}
